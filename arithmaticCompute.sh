@@ -1,1 +1,3 @@
-#welcome to arithmatic computation
+#!/bin/bash -x
+read a b c
+echo "$a $b $c"
