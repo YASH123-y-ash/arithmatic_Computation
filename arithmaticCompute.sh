@@ -27,3 +27,16 @@ dr[d]=$result4
 
 		echo="value of dictionary in array is: ${ar[@]}"
 
+for((i=0;i<$(($count-1));i++))
+do
+for((j=$(($i+1));j<count;j++))
+do
+if((${ar[i]}<${ar[j]}))
+then
+temp=${ar[i]}
+ar[$i]=${ar[j]}
+ar[$j]=$temp
+fi
+done
+done
+echo ${ar[@]}
